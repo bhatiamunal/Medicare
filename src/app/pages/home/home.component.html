@@ -1,0 +1,185 @@
+<style>
+    .marginTopBottom{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    .data-word-limit
+    {
+        max-width: 400px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+  
+</style>
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://onemg.gumlet.io/a_ignore,w_1269,h_250,c_fit,q_auto,f_auto/c5c79b59-a029-48a4-b1ca-5a3167c5619e.png" alt="Los Angeles" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="https://onemg.gumlet.io/a_ignore,w_1269,h_250,c_fit,q_auto,f_auto/95aad31c-3294-40ac-9152-42240752a77f.png" alt="Chicago" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="https://onemg.gumlet.io/a_ignore,w_1269,h_250,c_fit,q_auto,f_auto/e6bc1817-ee4c-49a7-9a82-925c3208b744.png" alt="New York" class="d-block" style="width:100%">
+      </div>
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+ 
+
+    <div class="container mt-3 mb-3">
+    <div class="row marginTopBottom">
+        <div class="col-10"> <h4> HOT SELLING - MEN DRESS SHOES </h4>  </div>
+        <div class="col-2" style="margin-top: 1%;  text-align: right;"> <a style="text-decoration: none; color: black; margin-right: 1%;" routerLink="Products"> View Range </a> </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let item of products; index as i;" > 
+            <div class="card" (click)="productId(item.id)">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 pt-3 pb-3" style="margin: 2%;">
+
+                     
+                        <img [src]="item.img1"  alt=""  width="90%" height="200px" srcset="">
+                        </div>
+                        <div class="col-12 data-word-limit">
+                           <b> {{item.name}} </b>
+                        </div>
+                        <div class="col-12">
+                            {{item.price}}
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+       
+      
+    </div>
+    </div>
+    
+    <div class="container mt-3 mb-3">
+        <div class="row">
+            <div class="col-4">
+                <div class="card product_card" routerLink="Products">
+                    <img src="https://newassets.apollo247.com/pub/media/wysiwyg/home/247_baby_oral_care_4thnov22.jpg" class="card-img-top" >
+                    
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card product_card" routerLink="Products">
+                    <img src="https://newassets.apollo247.com/pub/media/wysiwyg/home/247_stomach_care_3rdnov22.jpg" class="card-img-top" >
+                    
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card product_card" routerLink="Products">
+                    <img src="https://newassets.apollo247.com/pub/media/wysiwyg/home/247_apollo_baby_diapers_3rdnov22.jpg" class="card-img-top" >
+                    
+                </div>
+            </div>
+           
+            <!-- <div class="col-3">
+                <div class="card" routerLink="Products">
+                    <img src="https://newassets.apollo247.com/pub/media/ves/brand/optimumnutrition_21oct.png" class="card-img-top" >
+                    
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="container mt-3 mb-3">
+        <div class="row">
+            <div class="col-2">
+                <div class="card" routerLink="Products">
+                    <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/c2a0598f-483c-48ff-9783-71e402aa28d3.png" class="card-img-top" >
+                    
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card" routerLink="Products">
+                    <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ab1da5f4-c074-47d2-b278-a5fbd2c93f1f.png" class="card-img-top" >
+                    
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card" routerLink="Products">
+                    <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/18e90e64-9e8c-47c5-ae33-508903429450.png" class="card-img-top" >
+                    
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card" routerLink="Products">
+                    <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/ba975795-98dc-4cd8-8b55-3c20230d70e3.png" class="card-img-top" >
+                    
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card" routerLink="Products">
+                    <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/5fa692ad-6647-4db5-9cb4-eb0bd9111331.png" class="card-img-top" >
+                    
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card" routerLink="Products">
+                    <img src="https://onemg.gumlet.io/a_ignore,w_150,h_150,c_fit,q_auto,f_auto/631e3dca-3d5b-49f8-832b-8341ec4784e7.png" class="card-img-top" >
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3 mb-3">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" >
+                    <div class="card-body">
+                        <h5 class="card-title">100% Genuine Medicine </h5>
+                        <p class="card-text">All medicines/healthcare products sold on Apollo Pharmacy are procured from our sister company - Apollo Pharmacy, with a reputation of selling only 100% genuine products. The products sold through Apollo Pharmacy are inspected thoroughly to ensure only genuine products make the cut. We believe that when it comes to medicines, quality and authenticity should never be compromised.</p>
+                        
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" >
+                    <div class="card-body">
+                        <h5 class="card-title">Over 4,500 Pharmacy Stores In India</h5>
+                        <p class="card-text">Our strong network lets us deliver medicines to every nook and corner of the country. We have more than 4,500 pharmacy stores in India catering to all your medicine needs. Our network is so vast that you may find an Apollo Pharmacy store at every 1 km. We are leveraging this vast network to now become an online medical store – by getting these medicines delivered to you.</p>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" >
+                    <div class="card-body">
+                        <h5 class="card-title">Most Trusted Online Medical Store Of India</h5>
+                        <p class="card-text">As pioneers in the healthcare segment, we understand the importance of trust. And that is why, over the years, we worked on building that trust. We ensure that every product sold through our offline/online stores are checked for their authenticity, quality, and compliance with the Central Drugs Standard Control Organization, the national regulatory body for Indian pharmaceuticals and medical devices.</p>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+   
